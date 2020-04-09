@@ -47,6 +47,18 @@ namespace GeographyQuiz2
       getQuestion();
     }
 
+    private void btnCheat_Click(object sender, EventArgs e)
+    {
+      KeyValuePair<string, string> question = Questions.ElementAt(currentQuestion);
+      Cheat cheatForm = new Cheat();
+      cheatForm.Tag = question.Value;
+      DialogResult isLazy = cheatForm.ShowDialog();
+      if (isLazy == DialogResult.OK)
+      {
+        txtAnswer.Text = question.Value;
+      }
+    }
+
     private void checkAnswer()
     {
       if (currentQuestion < 2)
@@ -88,6 +100,5 @@ namespace GeographyQuiz2
       MessageBox.Show($"Your score is {score}!\n{corrections}\nFinal Time: {lblTime.Text}");
       timer1.Stop();
     }
-
   }
 }

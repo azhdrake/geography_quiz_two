@@ -34,11 +34,12 @@
       this.lblQuestion = new System.Windows.Forms.Label();
       this.timer1 = new System.Windows.Forms.Timer(this.components);
       this.lblTime = new System.Windows.Forms.Label();
+      this.btnCheat = new System.Windows.Forms.Button();
       this.SuspendLayout();
       // 
       // txtAnswer
       // 
-      this.txtAnswer.Location = new System.Drawing.Point(42, 171);
+      this.txtAnswer.Location = new System.Drawing.Point(40, 174);
       this.txtAnswer.MaxLength = 15;
       this.txtAnswer.Name = "txtAnswer";
       this.txtAnswer.Size = new System.Drawing.Size(189, 31);
@@ -78,11 +79,22 @@
       this.lblTime.Text = "00:00";
       this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
       // 
+      // btnCheat
+      // 
+      this.btnCheat.Location = new System.Drawing.Point(40, 223);
+      this.btnCheat.Name = "btnCheat";
+      this.btnCheat.Size = new System.Drawing.Size(105, 40);
+      this.btnCheat.TabIndex = 4;
+      this.btnCheat.Text = "Cheat";
+      this.btnCheat.UseVisualStyleBackColor = true;
+      this.btnCheat.Click += new System.EventHandler(this.btnCheat_Click);
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(388, 285);
+      this.Controls.Add(this.btnCheat);
       this.Controls.Add(this.lblTime);
       this.Controls.Add(this.lblQuestion);
       this.Controls.Add(this.btnSubmit);
@@ -101,6 +113,7 @@
         private System.Windows.Forms.Label lblQuestion;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Button btnCheat;
     }
 }
 
