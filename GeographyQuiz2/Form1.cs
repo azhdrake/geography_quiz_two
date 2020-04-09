@@ -49,10 +49,13 @@ namespace GeographyQuiz2
 
     private void btnCheat_Click(object sender, EventArgs e)
     {
+      // Get's current answer, sends it to the cheat form, sees if I'm Lazy was pressed.
       KeyValuePair<string, string> question = Questions.ElementAt(currentQuestion);
+
       Cheat cheatForm = new Cheat();
       cheatForm.Tag = question.Value;
       DialogResult isLazy = cheatForm.ShowDialog();
+
       if (isLazy == DialogResult.OK)
       {
         txtAnswer.Text = question.Value;
